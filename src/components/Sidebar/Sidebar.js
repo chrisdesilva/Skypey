@@ -3,11 +3,13 @@ import User from '../../containers/User/User';
 import './Sidebar.css';
 
 const Sidebar = ({ contacts }) => {
-  return ( 
+  return (
     <aside className="Sidebar">
-      {contacts.map( (contact, index) => <User key={contact}  user={contact} />)}
+      {contacts.map(contact => (
+        <User user={contact} key={contact.user_id} />
+      ))}
     </aside>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar
